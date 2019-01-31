@@ -684,13 +684,12 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController id="B8D-0N-5wS" sceneMemberID="viewController">
-                    <window key="window" title="IconToStore" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
+                    <window key="window" title="Store Icon Converter" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="IQv-IB-iLA">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="350" height="250"/>
+                        <rect key="contentRect" x="196" y="240" width="260" height="250"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
-                        <value key="minSize" type="size" width="325" height="225"/>
-                        <value key="maxSize" type="size" width="400" height="350"/>
+                        <value key="minSize" type="size" width="260" height="250"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -703,57 +702,56 @@
             </objects>
             <point key="canvasLocation" x="75" y="250"/>
         </scene>
-        <!--IconToStore-->
+        <!--Store Icon Generator-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController title="IconToStore" id="XfG-lQ-9wD" customClass="ViewController" customModule="IcontoStore" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Store Icon Generator" id="XfG-lQ-9wD" customClass="ViewController" customModule="IcontoStore" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="400" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="250" height="272"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="VNL-Nj-Vfx" customClass="DroppableImageView" customModule="IcontoStore" customModuleProvider="target">
-                                <rect key="frame" x="147" y="90" width="106" height="106"/>
+                                <rect key="frame" x="72" y="83" width="106" height="106"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="FRv-05-Z5y"/>
                                     <constraint firstAttribute="height" constant="100" id="xAJ-7s-bSC"/>
                                 </constraints>
                                 <imageCell key="cell" selectable="YES" editable="YES" alignment="left" imageScaling="proportionallyDown" imageFrameStyle="grayBezel" id="jHL-0G-jGF"/>
                             </imageView>
-                            <progressIndicator wantsLayer="YES" maxValue="100" style="bar" translatesAutoresizingMaskIntoConstraints="NO" id="BRl-dI-qhs">
-                                <rect key="frame" x="150" y="49" width="100" height="20"/>
-                            </progressIndicator>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jAm-2P-aH1">
-                                <rect key="frame" x="114" y="213" width="173" height="17"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Drag an image into the well." id="RTe-fT-bQo">
+                                <rect key="frame" x="63" y="206" width="125" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Drag in an app icon." id="RTe-fT-bQo">
                                     <font key="font" metaFont="system"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hQg-aF-2xB">
-                                <rect key="frame" x="157" y="12" width="87" height="32"/>
-                                <buttonCell key="cell" type="push" title="Change" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="XdV-6s-21C">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="0pm-Bk-Dek">
+                                <rect key="frame" x="13" y="20" width="224" height="51"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="220" id="yoI-j3-Kxb"/>
+                                </constraints>
+                                <textFieldCell key="cell" selectable="YES" alignment="center" title="Then select a location for generated icons. An .xcassets folder works best." id="ema-cL-eBC">
                                     <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="changeLocationTapped:" target="XfG-lQ-9wD" id="7tm-Qa-W1Q"/>
-                                </connections>
-                            </button>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="hQg-aF-2xB" firstAttribute="top" secondItem="BRl-dI-qhs" secondAttribute="bottom" constant="10" id="2op-HS-MdT"/>
-                            <constraint firstItem="BRl-dI-qhs" firstAttribute="top" secondItem="VNL-Nj-Vfx" secondAttribute="bottom" constant="25" id="7zg-Di-4Xb"/>
-                            <constraint firstItem="BRl-dI-qhs" firstAttribute="trailing" secondItem="VNL-Nj-Vfx" secondAttribute="trailing" id="Drn-MI-eNF"/>
-                            <constraint firstItem="hQg-aF-2xB" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="Qrj-n8-1hQ"/>
+                            <constraint firstItem="0pm-Bk-Dek" firstAttribute="top" secondItem="VNL-Nj-Vfx" secondAttribute="bottom" constant="15" id="10w-0V-Gjf"/>
+                            <constraint firstItem="0pm-Bk-Dek" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" priority="250" constant="15" id="7ia-1b-EEi"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0pm-Bk-Dek" secondAttribute="trailing" priority="250" constant="15" id="H5N-LG-qMB"/>
+                            <constraint firstItem="0pm-Bk-Dek" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="LlF-f9-czf"/>
+                            <constraint firstAttribute="bottom" secondItem="0pm-Bk-Dek" secondAttribute="bottom" constant="20" symbolic="YES" id="Nqk-sn-3Xj"/>
                             <constraint firstItem="VNL-Nj-Vfx" firstAttribute="top" secondItem="jAm-2P-aH1" secondAttribute="bottom" constant="20" id="Sg3-C5-rXw"/>
                             <constraint firstItem="jAm-2P-aH1" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="VZJ-zw-HfY"/>
-                            <constraint firstItem="jAm-2P-aH1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="Yd5-3k-AST"/>
                             <constraint firstItem="VNL-Nj-Vfx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="b1u-bJ-t0p"/>
-                            <constraint firstItem="BRl-dI-qhs" firstAttribute="leading" secondItem="VNL-Nj-Vfx" secondAttribute="leading" id="rRB-Vu-J83"/>
+                            <constraint firstItem="VNL-Nj-Vfx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="lGk-QI-miA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="0pm-Bk-Dek" id="caJ-SX-dBZ"/>
                         <outlet property="imageWell" destination="VNL-Nj-Vfx" id="vVg-8p-M7M"/>
                         <outlet property="topTextField" destination="jAm-2P-aH1" id="6fD-8f-cG3"/>
                     </connections>

@@ -59,6 +59,22 @@ extension NSImage {
     return nil
   }
   
+  /// Resize the image to the given size.
+  ///
+  /// - Parameter size: The size to resize the image to.
+  /// - Returns: The resized image.
+  func resize(withSize targetSize: NSSize) -> NSImage? {
+    let frame = NSRect(x: 0, y: 0, width: targetSize.width, height: targetSize.height)
+    guard let representation = self.bestRepresentation(for: frame, context: nil, hints: nil) else {
+      return nil
+    }
+    let image = NSImage(size: targetSize, flipped: false, drawingHandler: { (_) -> Bool in
+      return representation.draw(in: frame)
+    })
+    
+    return image
+  }
+  
   ///  Copies the current image and resizes it to the size of the given NSSize, while
   ///  maintaining the aspect ratio of the original image.
   ///
