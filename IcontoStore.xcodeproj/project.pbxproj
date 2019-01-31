@@ -15,6 +15,7 @@
 		042BD8122202819900F3C6EA /* IcontoStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BD8112202819900F3C6EA /* IcontoStoreUITests.swift */; };
 		042BD820220283DE00F3C6EA /* DroppableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BD81F220283DE00F3C6EA /* DroppableImageView.swift */; };
 		042BD8222202899800F3C6EA /* ResizeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BD8212202899800F3C6EA /* ResizeExtensions.swift */; };
+		04AF92532202BD10003305E0 /* ResizableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AF92522202BD10003305E0 /* ResizableTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		042BD8132202819900F3C6EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		042BD81F220283DE00F3C6EA /* DroppableImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DroppableImageView.swift; sourceTree = "<group>"; };
 		042BD8212202899800F3C6EA /* ResizeExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeExtensions.swift; sourceTree = "<group>"; };
+		04AF92522202BD10003305E0 /* ResizableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizableTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				042BD7F52202819900F3C6EA /* ViewController.swift */,
 				042BD8212202899800F3C6EA /* ResizeExtensions.swift */,
 				042BD81F220283DE00F3C6EA /* DroppableImageView.swift */,
+				04AF92522202BD10003305E0 /* ResizableTextField.swift */,
 				042BD7F72202819900F3C6EA /* Assets.xcassets */,
 				042BD7F92202819900F3C6EA /* Main.storyboard */,
 				042BD7FC2202819900F3C6EA /* Info.plist */,
@@ -198,6 +201,11 @@
 				TargetAttributes = {
 					042BD7EF2202819900F3C6EA = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.Sandbox = {
+								enabled = 1;
+							};
+						};
 					};
 					042BD8012202819900F3C6EA = {
 						CreatedOnToolsVersion = 10.1;
@@ -260,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04AF92532202BD10003305E0 /* ResizableTextField.swift in Sources */,
 				042BD7F62202819900F3C6EA /* ViewController.swift in Sources */,
 				042BD820220283DE00F3C6EA /* DroppableImageView.swift in Sources */,
 				042BD7F42202819900F3C6EA /* AppDelegate.swift in Sources */,
