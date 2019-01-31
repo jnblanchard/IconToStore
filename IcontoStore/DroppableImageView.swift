@@ -8,7 +8,13 @@
 
 import Cocoa
 
+protocol DragDelegate {
+  func didCollect(path: String)
+}
+
 class DroppableImageView: NSImageView {
+  
+  var delegate: DragDelegate?
   
   override func draw(_ dirtyRect: NSRect) {
     super.draw(dirtyRect)
@@ -17,12 +23,10 @@ class DroppableImageView: NSImageView {
   
   override func draggingEnded(_ sender: NSDraggingInfo) {
     let pasteBoard = sender.draggingPasteboard
-    let fileName = pasteBoard.string(forType: NSPasteboard.PasteboardType.png)
-    guard let pasteboard = sender.draggingPasteboard.propertyList(forType: NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")) as? NSArray,
+    guard let pasteboard = pasteBoard.propertyList(forType: NSPasteboard.PasteboardType(rawValue: "NSFilenamesPboardType")) as? NSArray,
       let path = pasteboard[0] as? String
       else { return }
-    // have the img path!
-    print(path)
+    delegate?.didCollect(path: path)
   }
   
 }
