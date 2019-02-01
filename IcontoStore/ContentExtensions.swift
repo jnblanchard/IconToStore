@@ -35,8 +35,11 @@ extension ViewController {
           try FileManager.default.removeItem(at: directoryURL)
         }
         try FileManager.default.createDirectory(atPath: directoryURL.path, withIntermediateDirectories: true, attributes: nil)
-        //self.makeDeviceFolder(at: directoryURL)
-        self.makeMacFolder(at: directoryURL)
+        if self.topButton.state == .off {
+          self.makeMacFolder(at: directoryURL)
+        } else {
+          self.makeDeviceFolder(at: directoryURL)
+        }
       } catch {
         print(error)
       }

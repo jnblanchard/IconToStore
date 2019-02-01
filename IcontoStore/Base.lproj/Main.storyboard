@@ -167,28 +167,38 @@
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lFv-OP-ecZ">
+                                <rect key="frame" x="78" y="251" width="94" height="18"/>
+                                <buttonCell key="cell" type="check" title="For iOS app" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="3h7-qE-Po9">
+                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="0pm-Bk-Dek" firstAttribute="top" secondItem="VNL-Nj-Vfx" secondAttribute="bottom" constant="15" id="10w-0V-Gjf"/>
                             <constraint firstItem="0pm-Bk-Dek" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="m2S-Jp-Qdl" secondAttribute="leading" priority="250" constant="15" id="7ia-1b-EEi"/>
+                            <constraint firstItem="jAm-2P-aH1" firstAttribute="top" secondItem="lFv-OP-ecZ" secondAttribute="bottom" constant="8" id="BpU-5q-5Un"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0pm-Bk-Dek" secondAttribute="trailing" priority="250" constant="15" id="H5N-LG-qMB"/>
                             <constraint firstItem="0pm-Bk-Dek" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="LlF-f9-czf"/>
                             <constraint firstAttribute="bottom" secondItem="0pm-Bk-Dek" secondAttribute="bottom" constant="20" symbolic="YES" id="Nqk-sn-3Xj"/>
                             <constraint firstItem="VNL-Nj-Vfx" firstAttribute="top" secondItem="jAm-2P-aH1" secondAttribute="bottom" constant="20" id="Sg3-C5-rXw"/>
                             <constraint firstItem="jAm-2P-aH1" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="VZJ-zw-HfY"/>
                             <constraint firstItem="VNL-Nj-Vfx" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="b1u-bJ-t0p"/>
+                            <constraint firstItem="lFv-OP-ecZ" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="fCY-U4-u86"/>
                             <constraint firstItem="VNL-Nj-Vfx" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="lGk-QI-miA"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="bottomTextField" destination="0pm-Bk-Dek" id="caJ-SX-dBZ"/>
                         <outlet property="imageWell" destination="VNL-Nj-Vfx" id="vVg-8p-M7M"/>
+                        <outlet property="topButton" destination="lFv-OP-ecZ" id="64p-JS-sZe"/>
                         <outlet property="topTextField" destination="jAm-2P-aH1" id="6fD-8f-cG3"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="761.5"/>
+            <point key="canvasLocation" x="75" y="761"/>
         </scene>
     </scenes>
 </document>

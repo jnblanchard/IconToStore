@@ -9,6 +9,7 @@
 import Cocoa
 
 class ViewController: NSViewController {
+  @IBOutlet weak var topButton: NSButton!
   @IBOutlet weak var topTextField: NSTextField!
   
   @IBOutlet weak var bottomTextField: NSTextField!

@@ -12,7 +12,6 @@ extension ViewController {
   func makeDeviceFolder(at directoryURL: URL) {
     do {
       try contentFor(iconName: "icon").write(to: directoryURL.appendingPathComponent("Contents.json"), atomically: true, encoding: .utf8)
-      try self.currentImage?.resize(withSize: NSSize(width: 1024, height: 1024))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon.png"))
       try self.currentImage?.resize(withSize: NSSize(width: 20, height: 20))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon20.png"))
       try self.currentImage?.resize(withSize: NSSize(width: 29, height: 29))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon29.png"))
       try self.currentImage?.resize(withSize: NSSize(width: 40, height: 40))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon40.png"))
@@ -25,6 +24,7 @@ extension ViewController {
       try self.currentImage?.resize(withSize: NSSize(width: 152, height: 152))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon152.png"))
       try self.currentImage?.resize(withSize: NSSize(width: 167, height: 167))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon167.png"))
       try self.currentImage?.resize(withSize: NSSize(width: 180, height: 180))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon180.png"))
+      try self.currentImage?.resize(withSize: NSSize(width: 1024, height: 1024))?.savePNGRepresentationToURL(url: directoryURL.appendingPathComponent("icon1024.png"))
     } catch {
       debugPrint(error)
     }
