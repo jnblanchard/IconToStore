@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041DABF72203FE240098351C /* DeviceIconExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041DABF62203FE240098351C /* DeviceIconExtensions.swift */; };
 		04292A432203A650008FCDB8 /* ContentExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04292A422203A650008FCDB8 /* ContentExtensions.swift */; };
 		042BD7F42202819900F3C6EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BD7F32202819900F3C6EA /* AppDelegate.swift */; };
 		042BD7F62202819900F3C6EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042BD7F52202819900F3C6EA /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		041DABF62203FE240098351C /* DeviceIconExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceIconExtensions.swift; sourceTree = "<group>"; };
 		04292A422203A650008FCDB8 /* ContentExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentExtensions.swift; sourceTree = "<group>"; };
 		042BD7F02202819900F3C6EA /* IcontoStore.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IcontoStore.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		042BD7F32202819900F3C6EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -110,6 +112,7 @@
 				042BD81F220283DE00F3C6EA /* DroppableImageView.swift */,
 				04AF92522202BD10003305E0 /* ResizableTextField.swift */,
 				04292A422203A650008FCDB8 /* ContentExtensions.swift */,
+				041DABF62203FE240098351C /* DeviceIconExtensions.swift */,
 				042BD7F72202819900F3C6EA /* Assets.xcassets */,
 				042BD7F92202819900F3C6EA /* Main.storyboard */,
 				042BD7FC2202819900F3C6EA /* Info.plist */,
@@ -275,6 +278,7 @@
 				042BD7F62202819900F3C6EA /* ViewController.swift in Sources */,
 				042BD820220283DE00F3C6EA /* DroppableImageView.swift in Sources */,
 				042BD7F42202819900F3C6EA /* AppDelegate.swift in Sources */,
+				041DABF72203FE240098351C /* DeviceIconExtensions.swift in Sources */,
 				042BD8222202899800F3C6EA /* ResizeExtensions.swift in Sources */,
 				04292A432203A650008FCDB8 /* ContentExtensions.swift in Sources */,
 			);
